@@ -1,4 +1,4 @@
-<label>Server Name</label>
+<label>Username</label>
 <!-- <input
         type="text"
         class="form-control"
@@ -6,11 +6,11 @@
 <input
   type="text"
   class="form-control"
-  [(ngModel)]="serverName"
+  [(ngModel)]="userName"
 >
 <button class="btn btn-default"
-  [disabled]="!allowNewServer"
-  (click)="onCreateServer()">Add Server</button>
+        [disabled]="!userName"
+        (click)="onCreateUser()">Add User</button>
 <!-- <p [innerText]="allowNewServer"></p> -->
-<p>{{ serverCreationStatus }}</p>
-<p>{{ serverName }}</p>
+<p>{{ userNameDisplay }}</p>
+<p>{{ userName }}</p>
