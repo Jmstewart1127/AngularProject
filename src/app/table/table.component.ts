@@ -7,14 +7,17 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  results: string[];
+  results: Object[];
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.http.get('https://spring-clock.herokuapp.com/rest/employees/2')
       .subscribe(data => {
-        this.results = data['results'];
-        console.log(this.results['0']);
+        this.results = data['0'];
+        console.log(data);
+        console.log(this.results);
+        console.log(data['0'].user);
       });
   }
 
