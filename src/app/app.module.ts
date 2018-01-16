@@ -14,10 +14,12 @@ import { UserComponent } from './user/user.component';
 import { TimeClockComponent } from './time-clock/time-clock.component';
 import { LoginComponent } from './login/login.component';
 import { BusinessComponent } from './business/business.component';
+import { BusinessEmployeesComponent } from './business-employees/business-employees.component';
 
 const appRoutes: Routes = [
   { path: 'employees', component: TableComponent },
   { path: 'business', component: BusinessComponent },
+  { path: 'employees/:businessId', component: BusinessEmployeesComponent },
   { path: 'user', component: UserComponent },
 ];
 
@@ -33,6 +35,7 @@ const appRoutes: Routes = [
     TimeClockComponent,
     LoginComponent,
     BusinessComponent,
+    BusinessEmployeesComponent,
   ],
   imports: [
     BrowserModule,

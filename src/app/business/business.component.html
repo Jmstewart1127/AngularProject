@@ -9,9 +9,9 @@
   <tr *ngFor="let business of businesses;">
     <td>{{ business.id }}</td>
     <td>{{ business.bizName }}</td>
-    <nav>
-      <a routerLink="/employees" routerLinkActive="active">View Employees</a>
-    </nav>
+    <a [routerLink]="['/employees', business.id]">
+      <button class="btn btn-default">View Employees</button>
+    </a>
   </tr>
   </tbody>
 </table>

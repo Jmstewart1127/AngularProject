@@ -9,15 +9,16 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let item of allEmployeeData;">
-    <td>{{ item.id }}</td>
-    <td>{{ item.user }}</td>
-    <td>{{ item.payRate }}</td>
-    <td>{{ item.totalPay }}</td>
-    <td>{{ item.clocked }}</td>
+  <tr *ngFor="let employee of employeeData;">
+    <td>{{ employee.id }}</td>
+    <td>{{ employee.user }}</td>
+    <td>{{ employee.payRate }}</td>
+    <td>{{ employee.totalPay }}</td>
+    <td>{{ employee.clocked }}</td>
     <button class="btn btn-default"
-            (click)="clockEmployeeInOrOut(item.id)">Clock In/Out
+            (click)="clockEmployeeInOrOut(employee.id)">Clock In/Out
     </button>
   </tr>
   </tbody>
 </table>
+

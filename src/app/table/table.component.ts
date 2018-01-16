@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {promise} from 'selenium-webdriver';
 
 @Component({
   selector: 'app-table',
@@ -9,18 +8,19 @@ import {promise} from 'selenium-webdriver';
 })
 export class TableComponent implements OnInit {
   results: Object[];
-  fullData: any;
+  allEmployeeData: any;
+  userId: number;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.getEmployeeData();
+    this.getAllEmployees();
   }
 
-  getEmployeeData(): void {
+  getAllEmployees() {
     this.http.get('https://spring-clock.herokuapp.com/rest/employees/2')
       .subscribe(data => {
-        this.fullData = data;
+        this.allEmployeeData = data;
       });
   }
 
@@ -29,7 +29,7 @@ export class TableComponent implements OnInit {
       .subscribe(data => {
         this.results = data['0'];
       });
-    setTimeout(() => this.getEmployeeData(), 200);
+    setTimeout(() => this.getAllEmployees(), 200);
   }
 
 }
