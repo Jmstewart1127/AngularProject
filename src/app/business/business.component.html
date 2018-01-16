@@ -1,0 +1,17 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Business ID</th>
+    <th scope="col">Business Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let business of businesses;">
+    <td>{{ business.id }}</td>
+    <td>{{ business.bizName }}</td>
+    <nav>
+      <a routerLink="/employees" routerLinkActive="active">View Employees</a>
+    </nav>
+  </tr>
+  </tbody>
+</table>

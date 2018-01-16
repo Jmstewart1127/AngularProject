@@ -2,15 +2,13 @@
     <div class="row">
         <div class="col-xs-12">
             <h3>App Component</h3>
+            <nav>
+              <a routerLink="/employees" routerLinkActive="active">Employees</a>
+              <a routerLink="/business" routerLinkActive="active">Businesses</a>
+              <a routerLink="/user" routerLinkActive="active">User</a>
+            </nav>
             <hr>
-            <app-server></app-server>
-            <!-- <div app-servers></div> -->
-            <!-- <div class="app-servers"></div> -->
-            <app-user></app-user>
-            <app-servers></app-servers>
-            <app-success></app-success>
-            <app-warning></app-warning>
-            <app-table></app-table>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>
