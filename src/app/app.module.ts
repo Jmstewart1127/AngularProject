@@ -15,6 +15,7 @@ import { TimeClockComponent } from './time-clock/time-clock.component';
 import { LoginComponent } from './login/login.component';
 import { BusinessComponent } from './business/business.component';
 import { BusinessEmployeesComponent } from './business-employees/business-employees.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 const appRoutes: Routes = [
   { path: 'employees', component: TableComponent },
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
     LoginComponent,
     BusinessComponent,
     BusinessEmployeesComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
